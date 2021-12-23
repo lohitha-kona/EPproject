@@ -1,0 +1,63 @@
+*{
+	margin:0;
+	padding: 0;
+
+}
+body {
+  background-image: url('https://images.idgesg.net/images/article/2019/08/election_2016_teaser_16_electronic_voting_evoting_security-100807007-large.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
+
+.btn-box{
+	width: 220px;
+	margin: 35px auto;
+	position: relative;
+	box-shadow: 0 0 20px 9px #ffa500;
+	border-radius: 30px;
+}
+
+.submit-btn{
+	width: 55%;
+	padding: 10px 10px;
+	cursor: pointer;
+	display: block;
+	margin: auto;
+	background:linear-gradient(to left, white,#787878);
+	border:50;
+	outline: none;
+	border-radius: 30px;
+        align:right;
+}
+
+
+.header
+    {
+        padding:60px;
+        text-align:center;
+        font-family:helvetica;
+    }
+
+ h1
+    {
+        color:white;
+        text-align:center;
+        
+    }
+
+
+span{
+	color: #777;
+	font-size: 12px;
+	bottom: 68px;
+	position: absolute;
+}
+#login{
+	left: 50px;
+}
+#register{
+	left: 450px;
+}

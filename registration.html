@@ -1,0 +1,171 @@
+<html>
+<head>
+
+<script>
+function validate(){
+var id=document.reg.id;
+var year=document.reg.year;
+var br=document.reg.br;
+var gender=document.reg.gender;
+var agr=document.reg.agr;
+var dat=document.reg.dat;
+var mon=document.reg.mon;
+var yr=document.reg.yr;
+
+
+if(id.value.length<9){
+  alert("Please enter your Registration ID");
+  return false;
+}
+if(year.value=="Year"){
+  alert("Please select your Year");
+  return false;
+}
+if(br.value=="Branch"){
+  alert("Please select your Branch");
+  return false;
+}
+if(dat.value=="Date"){
+  alert("Please select date in your Date of Birth");
+  return false;
+}
+if(mon.value=="Month"){
+  alert("Please select month in your Date of Birth");
+  return false;
+}
+if(yr.value=="Year"){
+  alert("Please select year in your Date of Birth");
+  return false;
+}
+var ch=false;
+for(var i=gender.length-1;i>=0;i--){
+if(gender[i].checked){
+  ch=true;
+}
+}
+if(ch==false){
+  alert("Please select your gender");
+  return false;
+}
+var check=false;
+if(agr.checked){
+  check=true;
+}
+if(check==false){
+  alert("Accept terms and conditions");
+  return false;
+}
+}
+</script>
+<title>REGISTRATION</title>
+<style>
+	body {
+  background-image: url('https://png.pngtree.com/back_origin_pic/04/48/50/84cd2a9fbc6cbd5522b2f048a56703a8.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
+</head>
+<a href="login.html"><button class='btn btn-success pull-right'>        Login          </button></a>
+<body>
+<form method="post" action="regis.jsp" name="reg" onsubmit="return validate()">
+<center>
+  <table border="5">
+    <tr>
+      <th>
+         <h1><centre>Registration Form</h1>
+      </th>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td>First Name:</td><td><input type="text"  name="fname" required></td>
+    </tr>
+    <tr>
+        <td>Last Name:</td><td><input type="text" name="lname" required></td>
+    </tr>
+    <tr>
+        <td>Registration ID:</td><td><input type="text" name="id"></td>
+    </tr>
+    <tr>
+        <td>Password:</td><td><input type="password" name="pass" required></td>
+    </tr>
+    <tr>
+        <td>Year:</td>
+            <td>
+		   <select element="Year" name="year">
+		   <option >Year</option>
+		   <option >1</option>
+                   <option >2</option>
+                   <option >3</option>
+            	   <option >4</option> </select>
+	     </td>
+    </tr>
+    <tr>
+        <td>Branch:</td>
+            <td>
+		   <select element="Branch" name="br">
+		   <option >Branch</option>
+		   <option >CSE</option>
+                   <option >ECE</option>
+                   <option >EEE</option>
+            	   <option >Mech</option> </select>
+	     </td>
+    </tr>
+    <tr>
+        <td>Email:</td><td><input type="email" name="email" required></td>
+    </tr>
+    <tr>
+        <td>Mobile Number:</td><td><input type="phone" name="num" required></td>
+    </tr>
+    <tr>
+        <td>Date of Birth:</td>
+            <td>
+		   <select element="Date" name="dat">
+		   <option >Date</option>
+		   <option >1</option>
+                   <option >2</option>
+                   <option >3</option>
+            	   <option >4</option> </select> 
+
+                   <select element="Month" name="mon">
+		   <option >Month</option>
+                   <option value=="1">January</option>
+                   <option value="2">February</option>
+                   <option value="3">March</option>
+            	   <option value="4">April</option></select>
+
+		   <select element="Year" name="yr">
+		   <option >Year</option>
+		   <option value=="2001">2001</option>
+                   <option value="2002">2002</option>
+                   <option value="2003">2003</option>
+            	   <option value="2004">2004</option> </select>     
+        </td>
+    </tr>
+    <tr>
+        <td>Gender:</td>
+                 <td><input type="radio"  name="gender" value="male" ><label for="male">Male</label>
+                   <input type="radio"  name="gender" value="female" ><label for="female">Female</label>
+                   <input type="radio"  name="gender" value="gender" ><label for="other">Other</label></td>
+    </tr>
+    <tr>
+        <td>Address:</td><td><textarea id="mt" type="address" name="addr" rows="4" columns="4" required></textarea></td>
+    </tr>
+    <tr>
+       <td>
+         <input  name="agr" type="checkbox">I Agree to the Terms and Conditions </td>
+       </td>
+    </tr>
+    <tr>
+     <td></td>
+      <td>
+        <input type="submit" value="Register">
+      </td>
+    </tr>
+</table> 
+</center> 
+</form>    
+</body>
+</html>
